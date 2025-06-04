@@ -4,7 +4,7 @@
 	      module="libidn2"
 	      artifact="libidn2"
 	      version=""
-	      vcs-id="GIT1dbe5980d29c+"
+	      vcs-id="GITf6b1e36de85d"
 	      extension="tar.xz"
 	      platform="ubuntu_24.04_x86_64">
 		<license name="GPLv3"/>
