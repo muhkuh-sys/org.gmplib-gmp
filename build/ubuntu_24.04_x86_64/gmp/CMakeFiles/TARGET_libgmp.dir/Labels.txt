@@ -1,0 +1,13 @@
+# Target labels
+ TARGET_libgmp
+# Source files and their labels
+/home/dungtran/Dokumente/work/org.gmplib-gmp/build/ubuntu_24.04_x86_64/gmp/CMakeFiles/TARGET_libgmp
+/home/dungtran/Dokumente/work/org.gmplib-gmp/build/ubuntu_24.04_x86_64/gmp/CMakeFiles/TARGET_libgmp.rule
+/home/dungtran/Dokumente/work/org.gmplib-gmp/build/ubuntu_24.04_x86_64/gmp/CMakeFiles/TARGET_libgmp-complete.rule
+/home/dungtran/Dokumente/work/org.gmplib-gmp/build/ubuntu_24.04_x86_64/gmp/libgmp/src/TARGET_libgmp-stamp/TARGET_libgmp-build.rule
+/home/dungtran/Dokumente/work/org.gmplib-gmp/build/ubuntu_24.04_x86_64/gmp/libgmp/src/TARGET_libgmp-stamp/TARGET_libgmp-configure.rule
+/home/dungtran/Dokumente/work/org.gmplib-gmp/build/ubuntu_24.04_x86_64/gmp/libgmp/src/TARGET_libgmp-stamp/TARGET_libgmp-download.rule
+/home/dungtran/Dokumente/work/org.gmplib-gmp/build/ubuntu_24.04_x86_64/gmp/libgmp/src/TARGET_libgmp-stamp/TARGET_libgmp-install.rule
+/home/dungtran/Dokumente/work/org.gmplib-gmp/build/ubuntu_24.04_x86_64/gmp/libgmp/src/TARGET_libgmp-stamp/TARGET_libgmp-mkdir.rule
+/home/dungtran/Dokumente/work/org.gmplib-gmp/build/ubuntu_24.04_x86_64/gmp/libgmp/src/TARGET_libgmp-stamp/TARGET_libgmp-patch.rule
+/home/dungtran/Dokumente/work/org.gmplib-gmp/build/ubuntu_24.04_x86_64/gmp/libgmp/src/TARGET_libgmp-stamp/TARGET_libgmp-update.rule

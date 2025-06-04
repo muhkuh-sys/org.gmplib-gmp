@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jonchki-artifact version="1.0">
+	<info group="org.gnu"
+	      module="libidn2"
+	      artifact="libidn2"
+	      version="@PROJECT_VERSION@"
+	      vcs-id="@PROJECT_VERSION_VCS@"
+	      extension="tar.xz"
+	      platform="@JONCHKI_PLATFORM@">
+		<license name="GPLv3"/>
+		<author name="Simon Josefsson" url="https://www.gnu.org/software/libidn/libidn2/manual/libidn2.html" />
+		<description>
+			This module contains libidn2 @PROJECT_VERSION@ in form of a static library and the development files.
+		</description>
+	</info>
+	<dependencies/>
+</jonchki-artifact>

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.7)
 
-PROJECT("org.gnmplib-gmp")
+PROJECT("org.gmplib-gmp")
 
 # Get the VCS version for the jonchki configuration.
 INCLUDE(cmake/version.cmake)
@@ -35,9 +35,9 @@ SET(PYTHON_EXECUTABLE "${Python3_EXECUTABLE}")
 #
 # Include the projects in the subdirectories.
 #
-IF((${BUILDCFG_ONLY_JONCHKI_CFG} STREQUAL "OFF"))
-	ADD_SUBDIRECTORY(external)
-ENDIF((${BUILDCFG_ONLY_JONCHKI_CFG} STREQUAL "OFF"))
+#IF((${BUILDCFG_ONLY_JONCHKI_CFG} STREQUAL "OFF"))
+#	ADD_SUBDIRECTORY(external)
+#ENDIF((${BUILDCFG_ONLY_JONCHKI_CFG} STREQUAL "OFF"))
 
 ADD_SUBDIRECTORY(gmp)
 

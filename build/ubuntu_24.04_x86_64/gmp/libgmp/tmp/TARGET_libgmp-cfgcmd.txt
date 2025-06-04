@@ -1,0 +1,1 @@
+cmd='/home/dungtran/Dokumente/work/org.gmplib-gmp/build/ubuntu_24.04_x86_64/gmp/libgmp/src/TARGET_libgmp/configure;--prefix=/home/dungtran/Dokumente/work/org.gmplib-gmp/build/ubuntu_24.04_x86_64/install;--enable-static=yes;--enable-shared=no;--enable-fat;--with-pic;--host='

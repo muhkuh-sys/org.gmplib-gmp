@@ -1,0 +1,12 @@
+# This is a generated file and its contents are an internal implementation detail.
+# The download step will be re-executed if anything in this file changes.
+# No other meaning or use of this file is supported.
+
+method=url
+command=/usr/bin/cmake;-P;/home/dungtran/Dokumente/work/org.gmplib-gmp/build/ubuntu_24.04_x86_64/gmp/libgmp/src/TARGET_libgmp-stamp/verify-TARGET_libgmp.cmake;COMMAND;/usr/bin/cmake;-P;/home/dungtran/Dokumente/work/org.gmplib-gmp/build/ubuntu_24.04_x86_64/gmp/libgmp/src/TARGET_libgmp-stamp/extract-TARGET_libgmp.cmake
+source_dir=/home/dungtran/Dokumente/work/org.gmplib-gmp/build/ubuntu_24.04_x86_64/gmp/libgmp/src/TARGET_libgmp
+work_dir=/home/dungtran/Dokumente/work/org.gmplib-gmp/build/ubuntu_24.04_x86_64/gmp/libgmp/src
+url(s)=/home/dungtran/Dokumente/work/org.gmplib-gmp/gmp/gmp-6.2.1.tar.xz
+hash=SHA1=0578d48607ec0e272177d175fd1807c30b00fdf2
+no_extract=
+

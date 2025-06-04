@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/dungtran/Dokumente/work/org.gmplib-gmp/build/ubuntu_24.04_x86_64/gmp/CMakeFiles/TARGET_libgmp"
+		},
+		{
+			"file" : "/home/dungtran/Dokumente/work/org.gmplib-gmp/build/ubuntu_24.04_x86_64/gmp/CMakeFiles/TARGET_libgmp.rule"
+		},
+		{
+			"file" : "/home/dungtran/Dokumente/work/org.gmplib-gmp/build/ubuntu_24.04_x86_64/gmp/CMakeFiles/TARGET_libgmp-complete.rule"
+		},
+		{
+			"file" : "/home/dungtran/Dokumente/work/org.gmplib-gmp/build/ubuntu_24.04_x86_64/gmp/libgmp/src/TARGET_libgmp-stamp/TARGET_libgmp-build.rule"
+		},
+		{
+			"file" : "/home/dungtran/Dokumente/work/org.gmplib-gmp/build/ubuntu_24.04_x86_64/gmp/libgmp/src/TARGET_libgmp-stamp/TARGET_libgmp-configure.rule"
+		},
+		{
+			"file" : "/home/dungtran/Dokumente/work/org.gmplib-gmp/build/ubuntu_24.04_x86_64/gmp/libgmp/src/TARGET_libgmp-stamp/TARGET_libgmp-download.rule"
+		},
+		{
+			"file" : "/home/dungtran/Dokumente/work/org.gmplib-gmp/build/ubuntu_24.04_x86_64/gmp/libgmp/src/TARGET_libgmp-stamp/TARGET_libgmp-install.rule"
+		},
+		{
+			"file" : "/home/dungtran/Dokumente/work/org.gmplib-gmp/build/ubuntu_24.04_x86_64/gmp/libgmp/src/TARGET_libgmp-stamp/TARGET_libgmp-mkdir.rule"
+		},
+		{
+			"file" : "/home/dungtran/Dokumente/work/org.gmplib-gmp/build/ubuntu_24.04_x86_64/gmp/libgmp/src/TARGET_libgmp-stamp/TARGET_libgmp-patch.rule"
+		},
+		{
+			"file" : "/home/dungtran/Dokumente/work/org.gmplib-gmp/build/ubuntu_24.04_x86_64/gmp/libgmp/src/TARGET_libgmp-stamp/TARGET_libgmp-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"TARGET_libgmp"
+		],
+		"name" : "TARGET_libgmp"
+	}
+}
