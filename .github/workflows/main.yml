@@ -57,10 +57,10 @@ jobs:
       with:
         submodules: recursive
     - name: Install m4 
-      run: 
+      run: sudo apt-get update && sudo apt-get install -y m4
     - name: Run build in container
       if: runner.os == 'Linux'
-      run: sudo apt-get update && sudo apt-get install -y m4
+      run: 
         docker run --rm \
           -v "${PWD}:/workspace" \
           -w /workspace \
