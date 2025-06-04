@@ -14,12 +14,12 @@ ENABLE_TESTING()
 # Set some installation folders.
 INCLUDE(cmake/muhkuh_installation_folders.cmake)
 
-OPTION(BUILDCFG_ONLY_JONCHKI_CFG "Build only the jonchki configuration. This is used for the resolve phase. The default is OFF."
-       "OFF")
+#OPTION(BUILDCFG_ONLY_JONCHKI_CFG "Build only the jonchki configuration. This is used for the resolve phase. The default is OFF."
+#       "OFF")
 
-SET(PKG_CONFIG_PATH "${CMAKE_BINARY_DIR}/install/lib/pkgconfig:${CMAKE_BINARY_DIR}/install/lib64/pkgconfig")
-SET(CPACK_GENERATOR "TXZ")
-MESSAGE("PKG_CONFIG_PATH: ${PKG_CONFIG_PATH}")
+#SET(PKG_CONFIG_PATH "${CMAKE_BINARY_DIR}/install/lib/pkgconfig:${CMAKE_BINARY_DIR}/install/lib64/pkgconfig")
+
+#MESSAGE("PKG_CONFIG_PATH: ${PKG_CONFIG_PATH}")
 
 #----------------------------------------------------------------------------
 #

@@ -1,1 +1,0 @@
-/home/dungtran/Dokumente/work/org.gmplib-gmp/build/ubuntu_24.04_x86_64/gmp/libgmp/src/TARGET_libgmp/mpn/x86_64/sec_tabselect.asm

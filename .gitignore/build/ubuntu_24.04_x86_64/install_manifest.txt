@@ -1,3 +1,0 @@
-/home/dungtran/Dokumente/work/org.gmplib-gmp/build/ubuntu_24.04_x86_64/_CPack_Packages/Linux/TXZ/libgmp-6.2.1-ubuntu_24.04_x86_64/lib/libgmp.a
-/home/dungtran/Dokumente/work/org.gmplib-gmp/build/ubuntu_24.04_x86_64/_CPack_Packages/Linux/TXZ/libgmp-6.2.1-ubuntu_24.04_x86_64/include/gmp.h
-/home/dungtran/Dokumente/work/org.gmplib-gmp/build/ubuntu_24.04_x86_64/_CPack_Packages/Linux/TXZ/libgmp-6.2.1-ubuntu_24.04_x86_64/./install.lua
