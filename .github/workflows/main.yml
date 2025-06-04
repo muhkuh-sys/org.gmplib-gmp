@@ -56,9 +56,11 @@ jobs:
       uses: actions/checkout@v4
       with:
         submodules: recursive
+    - name: Install m4 
+      run: 
     - name: Run build in container
       if: runner.os == 'Linux'
-      run: |
+      run: sudo apt-get update && sudo apt-get install -y m4
         docker run --rm \
           -v "${PWD}:/workspace" \
           -w /workspace \
