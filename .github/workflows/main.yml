@@ -50,16 +50,15 @@ jobs:
       uses: docker/setup-qemu-action@v3
       with:
         platforms: linux/arm64, linux/riscv64
-    - name: check architectur
-      run: lsb_release -a
+    - name: Install m4 and set git safe.directory
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y m4
+        git config --global --add safe.directory /workspace
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
         submodules: recursive
-    - name: Install m4 
-      run: sudo apt-get update && sudo apt-get install -y m4
-    - name: Fix Git safe directory issue
-      run: git config --global --add safe.directory /workspace
     - name: Run build in container
       if: runner.os == 'Linux'
       run: |
