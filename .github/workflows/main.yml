@@ -50,11 +50,6 @@ jobs:
       uses: docker/setup-qemu-action@v3
       with:
         platforms: linux/arm64, linux/riscv64
-    - name: Install m4 and set git safe.directory
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y m4
-        git config --global --add safe.directory /workspace
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
