@@ -38,6 +38,8 @@ ExternalProject_Add(TARGET_libgmp
                     CONFIGURE_COMMAND ${CMAKE_CURRENT_BINARY_DIR}/libgmp/src/TARGET_libgmp/configure --prefix=${CMAKE_BINARY_DIR}/install --enable-static=yes --enable-shared=no --enable-fat --with-pic --host=${CONFIGURE_HOST}
                     BUILD_COMMAND make
                     INSTALL_COMMAND make install
+                    TEST_COMMAND ${CMAKE_SOURCE_DIR}/cmake/tools/fix_pkgconfig.sh ${CMAKE_BINARY_DIR}/install
+                    TEST_AFTER_INSTALL 1
 )
 
 #SET(LIBGMP_PREFIX       ${CMAKE_BINARY_DIR}/install       CACHE INTERNAL "The complete path to the libgmp installation.")
@@ -56,11 +58,7 @@ INSTALL(FILES ${CMAKE_BINARY_DIR}/install/lib/libgmp.a
 INSTALL(DIRECTORY ${CMAKE_BINARY_DIR}/install/include/
         DESTINATION include)
 
-FILE(READ ${CMAKE_BINARY_DIR}/install/lib/pkgconfig/gmp.pc FILE_CONTENTS)
-STRING(REGEX REPLACE "prefix=[^\r\n]+" "prefix=\$\{pcfiledir\}/.." FILE_CONTENTS "${FILE_CONTENTS}")
-FILE(WRITE ${CMAKE_BINARY_DIR}/install/lib/pkgconfig_patched/gmp.pc "${FILE_CONTENTS}")
-
-INSTALL(FILES ${CMAKE_BINARY_DIR}/install/lib/pkgconfig_patched/gmp.pc ${CMAKE_BINARY_DIR}/install/lib/pkgconfig_patched/gmp.pc
+INSTALL(FILES ${CMAKE_BINARY_DIR}/install/lib/pkgconfig/gmp.pc
         DESTINATION pkgconfig)
 
 CONFIGURE_FILE(installer/install.lua 
