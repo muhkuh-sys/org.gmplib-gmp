@@ -56,6 +56,12 @@ INSTALL(FILES ${CMAKE_BINARY_DIR}/install/lib/libgmp.a
 INSTALL(DIRECTORY ${CMAKE_BINARY_DIR}/install/include/
         DESTINATION include)
 
+FILE(READ ${CMAKE_BINARY_DIR}/install/lib/pkgconfig/gmp.pc FILE_CONTENTS)
+STRING(REGEX REPLACE "prefix=[^\r\n]+" "prefix=\$\{pcfiledir\}/.." FILE_CONTENTS "${FILE_CONTENTS}")
+FILE(WRITE ${CMAKE_BINARY_DIR}/install/lib/pkgconfig_patched/gmp.pc "${FILE_CONTENTS}")
+
+INSTALL(FILES ${CMAKE_BINARY_DIR}/install/lib/pkgconfig_patched/gmp.pc ${CMAKE_BINARY_DIR}/install/lib/pkgconfig_patched/gmp.pc
+        DESTINATION pkgconfig)
 
 CONFIGURE_FILE(installer/install.lua 
 				${CMAKE_CURRENT_BINARY_DIR}/package/install.lua
