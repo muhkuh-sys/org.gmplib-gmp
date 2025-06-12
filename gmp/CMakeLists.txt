@@ -45,15 +45,15 @@ INSTALL(FILES ${CMAKE_BINARY_DIR}/install/lib/pkgconfig/gmp.pc
         DESTINATION pkgconfig)
 
 CONFIGURE_FILE(installer/install.lua 
-				${CMAKE_CURRENT_BINARY_DIR}/package/install.lua
-				@ONLY)
+               ${CMAKE_CURRENT_BINARY_DIR}/package/install.lua
+               @ONLY)
 
-INSTALL (FILES ${CMAKE_CURRENT_BINARY_DIR}/package/install.lua
-		DESTINATION .)
+INSTALL(FILES ${CMAKE_CURRENT_BINARY_DIR}/package/install.lua
+        DESTINATION .)
 
 CONFIGURE_FILE(installer/libgmp.xml
-				${CPACK_OUTPUT_FILE_PREFIX}/gmp-${PROJECT_VERSION}-${JONCHKI_PLATFORM}.xml
-				@ONLY)
+               ${CPACK_OUTPUT_FILE_PREFIX}/gmp-${PROJECT_VERSION}-${JONCHKI_PLATFORM}.xml
+               @ONLY)
 
 SET(CPACK_PACKAGE_FILE_NAME "gmp-${PROJECT_VERSION}-${JONCHKI_PLATFORM}")
 
