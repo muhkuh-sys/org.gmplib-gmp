@@ -4,7 +4,7 @@ PROJECT("libgmp")
 
 INCLUDE(ExternalProject)
 
-SET(VERSION_EXTERNAL "6.2.1")
+SET(VERSION_EXTERNAL "6.3.0")
 SET(VERSION_PACKAGE  "1")
 SET(PROJECT_VERSION  "${VERSION_EXTERNAL}.${VERSION_PACKAGE}")
 SET(PYTHON_EXECUTABLE "${Python3_EXECUTABLE}")
@@ -16,8 +16,8 @@ SET(PYTHON_EXECUTABLE "${Python3_EXECUTABLE}")
 #
 ExternalProject_Add(TARGET_libgmp
                     PREFIX ${CMAKE_CURRENT_BINARY_DIR}/libgmp
-                    URL ${CMAKE_CURRENT_SOURCE_DIR}/gmp-6.2.1.tar.xz
-                    URL_HASH SHA1=0578d48607ec0e272177d175fd1807c30b00fdf2
+                    URL ${CMAKE_CURRENT_SOURCE_DIR}/gmp-${VERSION_EXTERNAL}.tar.xz
+                    URL_HASH SHA1=b4043dd2964ab1a858109da85c44de224384f352
                     CONFIGURE_COMMAND ${CMAKE_CURRENT_BINARY_DIR}/libgmp/src/TARGET_libgmp/configure --prefix=${CMAKE_BINARY_DIR}/install --enable-static=yes --enable-shared=no --enable-fat --with-pic
                     BUILD_COMMAND make
                     INSTALL_COMMAND make install
