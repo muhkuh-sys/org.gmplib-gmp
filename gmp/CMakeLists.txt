@@ -5,6 +5,8 @@ PROJECT("libgmp")
 INCLUDE(ExternalProject)
 
 SET(VERSION_EXTERNAL "6.2.1")
+SET(VERSION_PACKAGE  "1")
+SET(PROJECT_VERSION  "${VERSION_EXTERNAL}.${VERSION_PACKAGE}")
 SET(PYTHON_EXECUTABLE "${Python3_EXECUTABLE}")
 
 
@@ -45,7 +47,7 @@ ExternalProject_Add(TARGET_libgmp
 
 
 # Create a package.
-SET(CPACK_OUTPUT_FILE_PREFIX ${CMAKE_BINARY_DIR}/../repository/org/gmplib-gmp/${VERSION_EXTERNAL})
+SET(CPACK_OUTPUT_FILE_PREFIX ${CMAKE_BINARY_DIR}/../repository/org/gmplib/${PROJECT_VERSION})
 SET(CPACK_INCLUDE_TOPLEVEL_DIRECTORY FALSE)
 SET(CPACK_GENERATOR "TXZ")
 
@@ -63,9 +65,23 @@ INSTALL (FILES ${CMAKE_CURRENT_BINARY_DIR}/package/install.lua
 		DESTINATION .)
 
 CONFIGURE_FILE(installer/libgmp.xml
-				${CPACK_OUTPUT_FILE_PREFIX}/libgmp-${VERSION_EXTERNAL}-${JONCHKI_PLATFORM}.xml
+				${CPACK_OUTPUT_FILE_PREFIX}/gmp-${PROJECT_VERSION}-${JONCHKI_PLATFORM}.xml
 				@ONLY)
 
-SET(CPACK_PACKAGE_FILE_NAME "libgmp-${VERSION_EXTERNAL}-${JONCHKI_PLATFORM}")
+SET(CPACK_PACKAGE_FILE_NAME "gmp-${PROJECT_VERSION}-${JONCHKI_PLATFORM}")
 
 INCLUDE(CPack)
+
+
+#-----------------------------------------------------------------------------
+#
+# Create a custom target named "pack".
+# It builds the package and creates the hashes.
+#
+ADD_CUSTOM_TARGET(pack
+                  COMMAND ${CMAKE_MAKE_PROGRAM}
+                  COMMAND ${CMAKE_MAKE_PROGRAM} package
+                  COMMAND "${PYTHON_EXECUTABLE}" ${CMAKE_HOME_DIRECTORY}/cmake/tools/generate_hash.py ${CPACK_OUTPUT_FILE_PREFIX}/gmp-${PROJECT_VERSION}-${JONCHKI_PLATFORM}.xml
+                  COMMAND "${PYTHON_EXECUTABLE}" ${CMAKE_HOME_DIRECTORY}/cmake/tools/generate_hash.py ${CPACK_OUTPUT_FILE_PREFIX}/gmp-${PROJECT_VERSION}-${JONCHKI_PLATFORM}.tar.xz
+                  COMMENT "Pack the artifact and generate the hashes...")
+
