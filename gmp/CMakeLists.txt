@@ -25,12 +25,6 @@ ExternalProject_Add(TARGET_libgmp
                     TEST_AFTER_INSTALL 1
 )
 
-#SET(LIBGMP_PREFIX       ${CMAKE_BINARY_DIR}/install       CACHE INTERNAL "The complete path to the libgmp installation.")
-#SET(LIBGMP_LIBRARY      gmp                               CACHE INTERNAL "The complete path to the libgmp library.")
-#SET(LIBGMP_INCLUDE_DIR  ${LIBGMP_PREFIX}/include          CACHE INTERNAL "The include folder for the libgmp library.")
-#SET(LIBGMP_LIB_DIR      ${LIBGMP_PREFIX}/lib              CACHE INTERNAL "The complete path to the libgmp library.")
-
-
 # Create a package.
 SET(CPACK_OUTPUT_FILE_PREFIX ${CMAKE_BINARY_DIR}/../repository/org/gmplib/${PROJECT_VERSION})
 SET(CPACK_INCLUDE_TOPLEVEL_DIRECTORY FALSE)
